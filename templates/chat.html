@@ -12,21 +12,23 @@
 {% endblock %}
 
 {% block body%}
-
-<div class="title">
-  <h2>chat room : {{room}}</h2>
+<div class="container">
+  <div class="title">
+      <h2 style="text-align:center; margin-bottom: 60px">chat room : {{room}}</h2>
+    </div>
+    <ul id="chat"></ul>
+    <form action="" id="message">
+    <hr>
+      <input class="form-control"
+              id="input_message"
+              placeholder="type your message here..." 
+              autocomplete="off" />
+      <div>
+        <button id="send_message" class="btn btn-primary">Send message</button>
+      </div> 
+    </form>
 </div>
-<ul id="chat"></ul>
-<form action="" id="message">
-<hr>
-  <input class="form-control"
-          id="input_message"
-          placeholder="type your message here..." 
-          autocomplete="off" />
-  <div>
-    <button id="send_message" class="btn btn-primary">Send message</button>
-  </div> 
-</form>
+
 
 {% endblock %}}
 

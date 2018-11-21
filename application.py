@@ -38,8 +38,9 @@ def handlemessage(msg):
 def message(data):
   time = datetime.now().strftime("%A %d %b at %H:%M")
   message = data["message"]
+  name = data['username']
   room = data['room']
-  emit("announce message", {"message": message, 'time': time}, room=room, broadcast=True)
+  emit("announce message", {"message": message, "user": name, 'time': time}, room=room, broadcast=True)
 
 @socketio.on('join')
 def on_join(data):
