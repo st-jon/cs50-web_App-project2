@@ -107,11 +107,12 @@
             li.style.textAlign = "left"
             li.style.fontStyle = "italic"
             li.style.color = "grey"
+            li.style.marginBottom = "20px"
           } else {
             li.style.textAlign = "right"
             li.style.fontStyle = "italic"
             li.style.color = "grey"
-
+            li.style.marginBottom = "20px"
           }
           document.querySelector('#chat').append(li)
         })
@@ -129,12 +130,12 @@
             li.style.textAlign = "left"
             li.style.fontStyle = "italic"
             li.style.color = "grey"
-
+            li.style.marginBottom = "20px"
           } else {
             li.style.textAlign = "right"
             li.style.fontStyle = "italic"
             li.style.color = "grey"
-
+            li.style.marginBottom = "20px"
           }
           document.querySelector('#chat').append(li)
         })
@@ -144,8 +145,10 @@
           li.innerHTML = `${data.time} <br> ${data.message}`
           if (user === data.user) {
             li.style.textAlign = "left"
+            li.style.marginBottom = "20px"
           } else {
             li.style.textAlign = "right"
+            li.style.marginBottom = "20px"
           }
           document.querySelector('#chat').append(li)
           // let content = document.querySelector('#chat').innerHTML
