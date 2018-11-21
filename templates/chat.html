@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item">
+      <a class="nav-link" id="leave" href="{{ url_for('index') }}">Leave the room</a>
+  </li>
+</ul>
+  <span class="navbar-text">
+    Logged as: {{ name }}
+  </span>
+{% endblock %}
+
+{% block body%}
+
+<div class="title">
+  <h2>chat room : {{room}}</h2>
+</div>
+<ul id="chat"></ul>
+<form action="" id="message">
+<hr>
+  <input class="form-control"
+          id="input_message"
+          placeholder="type your message here..." 
+          autocomplete="off" />
+  <div>
+    <button id="send_message" class="btn btn-primary">Send message</button>
+  </div> 
+</form>
+
+{% endblock %}}
+
+{% block footer %}
+
+{% endblock %}
